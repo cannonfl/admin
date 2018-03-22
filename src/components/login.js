@@ -5,7 +5,7 @@ import {render} from "react-dom";
 class Login extends React.Component {
   render() {
     return (
-      <h2>Hello from Login</h2>
+      <h2>Hello from the Login component</h2>
     )
   }
 }
