@@ -1,19 +1,14 @@
-"use strict";
-const express = require("Express");
-const path = require("path");
-const app = express();
+// server
+var express = require('express');
+var app = express();
+app.set('port', process.env.PORT || 5000);
 
-app.set('port', process.env.PORT || 4000);
-//app.use(express.static("public"));
-
-/*app.get("/", (req, res) => {
-  res.send(path.sesolve(__dirname, "public", "index.html"));
-});*/
+// Our first route
 app.get('/', function (req, res) {
   res.send('Hello Node + GitHub!');
 });
-let port = app.get('port');
-console.log(`port will be set to ${port}`);
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-})
+
+// Listen to port
+app.listen(app.get('port'), function () {
+  console.log('App is listening on port ' + app.get('port'));
+});

@@ -1,2 +1,0 @@
-kill all containers: docker rm $(docker ps -aq)
-build image using Dockerfile: docker build -t <name> .
