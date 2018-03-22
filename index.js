@@ -6,6 +6,7 @@ const app = express();
 app.set('port', process.env.PORT || 5000);
 
 app.use(express.static("public"));
+
 // Our first route
 app.use('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, "public", "index.html"));

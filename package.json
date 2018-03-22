@@ -8,7 +8,7 @@
     "npm": "5.7.1"
   },
   "scripts": {
-    "postinstall": "webpack --mode development"
+    "postinstall": "webpack --mode production"
   },
   "repository": {
     "type": "git",
