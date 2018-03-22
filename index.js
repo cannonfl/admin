@@ -1,11 +1,14 @@
 // server
-var express = require('express');
-var app = express();
+const express = require('express');
+const path = require("path");
+const app = express();
+
 app.set('port', process.env.PORT || 5000);
 
+app.use(express.static("dist"));
 // Our first route
-app.get('/', function (req, res) {
-  res.send('Hello Node + GitHub!');
+app.use('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
 // Listen to port
