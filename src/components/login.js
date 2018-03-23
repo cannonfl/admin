@@ -1,11 +1,15 @@
-"use strict";
-import React from "react";
-import {render} from "react-dom";
+'use strict';
+import React from 'react';
+import {render} from 'react-dom';
+import {Button} from 'react-bootstrap';
 
 class Login extends React.Component {
+  handleClick() {
+    console.log('CLICKED');
+  }
   render() {
     return (
-      <h2>Hello from the Login component</h2>
+      <Button onClick={() => this.handleClick()}>Login</Button>
     )
   }
 }

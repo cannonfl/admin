@@ -6,6 +6,7 @@
 .nyc_output/
 
 /public/bundle.js
+/src/config
 
 # logs
 *.log*
